@@ -313,7 +313,7 @@
     --main_content_h2_top : #21d4fd;  
     --main_content_btn_bot :  #f77062;
     --main_content_btn_top :  #fe5196;   
-    --main_container_h : 90vh;
+    --main_container_h : 100vh;
     --main_container_W : 100%;
 }
 
@@ -545,7 +545,7 @@
 /*#region M.Queries Our Services Section */
 @media screen and (max-width: 960px) {
     .services {
-        height: 1600px;
+        height: 800px;
     }
 
     .services h1 {
