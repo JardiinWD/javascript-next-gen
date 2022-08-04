@@ -34,6 +34,12 @@
     background-color: var(--main_content_h1_bg);
 }
 
+.main_btn,
+.main_btn:after {
+    transition: all 0.35s;
+    border-radius: 4px;        
+}
+
 /*#endregion */
 
 /*#region Navbar Rules */
@@ -264,7 +270,9 @@
     --main_content_h1_btm : #ff0844;
     --main_content_h1_top : #ffb199;
     --main_content_h2_btm : #b721ff;
-    --main_content_h2_top : #21d4fd;    
+    --main_content_h2_top : #21d4fd;  
+    --main_content_btn_bot :  #f77062;
+    --main_content_btn_top :  #fe5196;   
     --main_container_h : 90vh;
     --main_container_W : 100%;
 }
@@ -287,10 +295,12 @@
     padding: 0 50px;
 }
 
+/* Colore Gradient dell'H1 */
 .main_content h1 {
     background-image: linear-gradient(to top, var(--main_content_h1_btm) 0%, var(--main_content_h1_top) 100%);
 }
 
+/* Colore Gradient dell'H2 */
 .main_content h2 {
     background-image: linear-gradient(to top, var(--main_content_h2_btm) 0%, var(--main_content_h2_top) 100%);
 }   
@@ -299,6 +309,62 @@
     margin-top: 1rem;
     font-size: 2rem;
     font-weight: 700;
+    color: #fff;
 }
+
+/* Button */
+.main_btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, var(--main_content_btn_bot) 0%, var(--main_content_btn_top) 100% );
+    padding: 14px 32px;
+    border: none;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+/* Testo button get Started */
+.main_btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Effetto sul button get Started */
+.main_btn:after{
+    position: absolute;
+    content: '';
+    /* Stato iniziale dell'effetto */
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #4837ff;
+}
+
+.main_btn:hover {
+    color: #fff;
+}
+
+.main_btn:hover:after {
+    width: 100%;
+}
+
+.main_img-container {
+    text-align: center;
+}
+
+/* Dimensioni immagine vettoriale */
+#main_img {
+    height: 80%;
+    width: 80%;
+}
+
+/*#endregion */
+
+/*#region M.Queries Hero Section */
 
 /*#endregion */
