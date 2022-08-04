@@ -12,7 +12,15 @@ const services = document.querySelector(".services_container")
 /* Verifica in console */
 console.log(services);
 
+/* Seleziono il wrapper delle mie icone */
+const icons = document.querySelector(".social_icons")
+/* Verifica in console */
+console.log(icons);
 
+/* Seleziono il mio Wrapper principale */
+const firstFooterLinks = document.getElementById("first_sections")
+/* Verifica in console */
+console.log(firstFooterLinks);
 
 /* Creazione di navbar di oggetto */
 const navbarLinks = [
@@ -51,6 +59,72 @@ const servicesCardsData = [
 ]
 console.log(servicesCardsData);
 
+/* Creazione dati dinamici per le mie icone */
+const iconsLinks = [
+    /* 1°icona */
+    {
+        ref : '/',
+        class : 'social_icon-link',
+        target : '_blank',
+        icon: 'fab fa-facebook'
+    },
+    /* 2°icona */
+    {
+        ref : '/',
+        class : 'social_icon-link',
+        target : '_blank',
+        icon: 'fab fa-instagram'
+    },   
+    /* 3°icona */
+    {
+        ref : '/',
+        class : 'social_icon-link',
+        target : '_blank',
+        icon: 'fab fa-twitter'
+    }, 
+    /* 4°icona */
+    {
+        ref : '/',
+        class : 'social_icon-link',
+        target : '_blank',
+        icon: 'fab fa-youtube'
+    },  
+    /* 5°icona */
+    {
+        ref : '/',
+        class : 'social_icon-link',
+        target : '_blank',
+        icon: 'fab fa-linkedin'
+    }      
+]
+console.log(iconsLinks);
+
+/* Prima sezione del Footer */
+
+const firstSections = [
+    {
+        ref: '/',
+        name: 'How it works',
+    },
+    {
+        ref: '/',
+        name: 'Testimonials',
+    },
+    {
+        ref: '/',
+        name: 'Careers',
+    },
+    {
+        ref: '/',
+        name: 'Investments',
+    },
+    {
+        ref: '/',
+        name: 'Terms of Service',
+    },               
+]
+console.log(firstSections);
+
 //#endregion
 
 
@@ -79,6 +153,27 @@ servicesCardsData.forEach(element => {
     `
     services.insertAdjacentHTML('beforeend', singleCard)
 })
+
+iconsLinks.forEach(element => {
+    console.log(element); // Verifica del mio oggetto
+    /* Creo la mia singola icona dinamica */
+    let singleIcon = 
+    `
+    <a href="${element.ref}" class="${element.class}" target="${element.target}">
+        <i class="${element.icon}"></i>
+    </a>
+    `
+    icons.insertAdjacentHTML('beforeend', singleIcon)
+})
+
+
+firstSections.forEach(element => {
+    console.log(element);
+    /* Singolo Ancor Tag */
+    let singleLink = `<a href="${element.ref}">${element.name}</a>`
+    firstFooterLinks.insertAdjacentHTML('beforeend', singleLink)
+})
+
 
 
 //#endregion
