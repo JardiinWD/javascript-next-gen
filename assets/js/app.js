@@ -37,7 +37,30 @@ secondFooterLinks.insertAdjacentHTML('afterbegin', secondFooterTitle)
 thirdFooterLinks.insertAdjacentHTML('afterbegin', thirdFooterTitle)
 fourthFooterLinks.insertAdjacentHTML('afterbegin', fourthFooterTitle)
 
+/* Loghi del footer e della Navbar */
 
+navbarLogo = document.querySelector(".navbar_container")
+footerLogo = document.querySelector(".social_media-wrap")
+/* console.log(navbarLogo, footerLogo); */
+
+
+/* Creaazione di oggetto per il logo per il footer */
+const logoFooter = [
+    {
+        icon : 'fa-solid fa-gem',
+        ref : '/',
+        id : 'footer_logo'
+    }
+]
+
+/* Logo per la navbar */
+const logoNavbar = [
+    {
+        icon : 'fa-solid fa-gem',
+        ref : '/',
+        id : 'navbar_logo'
+    }
+]
 
 /* Creazione di navbar di oggetto */
 const navbarLinks = [
@@ -275,6 +298,27 @@ fourthSections.forEach(element => {
     fourthFooterLinks.insertAdjacentHTML('beforeend', singleLink)
 })
 
+/* Ciclo per Logo Navbar dinamico */
+logoNavbar.forEach(element => {
+    let logo = 
+    `
+    <a href="${element.ref}" id="${element.id}">
+        <i class="${element.icon}"></i>NEXT
+    </a>
+    `
+    navbarLogo.insertAdjacentHTML('afterbegin', logo)
+})
+
+/* Ciclo per Logo Footer dinamico */
+logoFooter.forEach(element => {
+    let logo = 
+    `
+    <a href="${element.ref}" id="${element.id}">
+        <i class="${element.icon}"></i>NEXT
+    </a>
+    `
+    footerLogo.insertAdjacentHTML('afterbegin', logo)
+})
 
 //#endregion
 
@@ -287,6 +331,5 @@ menu.addEventListener('click', function() {
     menu.classList.toggle('is-active')
     menuLinks.classList.toggle('active')
 })
-
 
 //#endregion
