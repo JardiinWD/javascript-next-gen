@@ -7,15 +7,23 @@
     <title>Javascript Next Generation WebSite</title>
     <!-- Link a foglio di style -->
     <link rel='stylesheet' href='./assets/css/style.css'>
+    <!-- Link a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
-    <!-- /.navbar -->
+    <!-- Sezione Navbar -->
     <nav class="navbar">
         <!-- /.navbar_container -->
         <div class="navbar_container">
             <!-- /#navbar_logo -->
-            <a href="/" id="navbar_logo">NEXT</a>
+            <a href="/" id="navbar_logo">
+                <!-- Logo a forma di gemma -->
+                <i class="fa-solid fa-gem"></i>
+                NEXT
+            </a>
             <!-- /#mobile-menu.navbar_toggle -->
             <div class="navbar_toggle" id="mobile-menu">
                 <!-- 1°linea -->    
@@ -51,6 +59,31 @@
         </div>
     </nav>
     
+    <!-- Sezione Hero -->
+
+    <div class="main">
+        <!-- /.main_container -->
+        <div class="main_container">
+            <!-- /.main_content -->
+            <div class="main_content">
+                <!-- Hero title -->
+                <h1>Next Generation</h1>
+                <!-- Hero sub -->
+                <h2>Technology</h2>
+                <!-- Hero Paragraph  -->
+                <p>See what makes us Different</p>
+                <!-- /.main_btn -->
+                <button class="main_btn">
+                    <a href="/">Get Started</a>
+                </button>
+            </div>
+            <!-- /.main_img-container -->
+            <div class="main_img-container">
+                <!-- /#main_img -->
+                <img src="./assets/img/pic1.svg" alt="Hero Image" id="main_img">
+            </div>
+        </div>
+    </div>
 
     <!-- Link a JS -->
     <script src='./assets/js/app.js'></script>

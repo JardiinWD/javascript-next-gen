@@ -12,6 +12,17 @@
     align-items: center;
 }
 
+/* Common utilities per i loghi color Gradient */
+#navbar_logo,
+.main_content h1 {
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
 /*#endregion */
 
 /*#region Navbar Rules */
@@ -51,11 +62,6 @@
 #navbar_logo {
     background-color: var(--navbar_logo_bg);
     background-image: linear-gradient(to top, var(--navbar_linear_bottom) 0%, var(--navbar_linear_top) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -237,4 +243,42 @@
         height: 50vh;
     }
 }
+/*#endregion */
+
+/*#region Hero Section */
+
+:root {
+    --main_bg_color : #141414;
+    --main_content_h1_bg : #ff8177;
+    --main_content_h1_btm : #ff0844;
+    --main_content_h1_top : #ffb199;
+    --main_container_h : 90vh;
+    --main_container_W : 100%;
+}
+
+.main {
+    background-color: var(--main_bg_color)
+}
+
+.main_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: var(--main_container_h);
+    background-color: var(--main_bg_color);
+    z-index: 1;
+    width: var(--main_container_W);
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main_content h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    background-color: var(--main_content_h1_bg);
+    background-image: linear-gradient(to top, var(--main_content_h1_btm) 0%, var(--main_content_h1_top) 100%);
+}
+
 /*#endregion */
