@@ -1,4 +1,8 @@
 /*#region Sheet Rules */
+
+/* Import font da Google */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +18,8 @@
 
 /* Common utilities per i loghi color Gradient */
 #navbar_logo,
-.main_content h1 {
+.main_content h1,
+.main_content h2 {
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -22,6 +27,12 @@
     -moz-text-fill-color: transparent;
 }
 
+.main_content h1,
+.main_content h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    background-color: var(--main_content_h1_bg);
+}
 
 /*#endregion */
 
@@ -252,6 +263,8 @@
     --main_content_h1_bg : #ff8177;
     --main_content_h1_btm : #ff0844;
     --main_content_h1_top : #ffb199;
+    --main_content_h2_btm : #b721ff;
+    --main_content_h2_top : #21d4fd;    
     --main_container_h : 90vh;
     --main_container_W : 100%;
 }
@@ -275,10 +288,17 @@
 }
 
 .main_content h1 {
-    font-size: 4rem;
-    text-transform: uppercase;
-    background-color: var(--main_content_h1_bg);
     background-image: linear-gradient(to top, var(--main_content_h1_btm) 0%, var(--main_content_h1_top) 100%);
+}
+
+.main_content h2 {
+    background-image: linear-gradient(to top, var(--main_content_h2_btm) 0%, var(--main_content_h2_top) 100%);
+}   
+
+.main_content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 /*#endregion */
