@@ -25,6 +25,7 @@
     --navbar_fixed_height : 80px;
     --navbar_links_color : #fff;
     --navbar_button_bg: #f77062;
+    --navbar_button_hover : #4837ff;
 }
 
 .navbar {
@@ -82,6 +83,11 @@
     height: 100%;
 }
 
+.navbar_links:hover {
+    color: var(--navbar_button_bg);
+    transition: all 0.3s ease;
+}
+
 .button {
     text-decoration: none;
     padding: 10px 20px;
@@ -93,6 +99,12 @@
     background: var(--navbar_button_bg);
     color: var(--navbar_links_color);
 }
+
+.button:hover {
+    background: var(--navbar_button_hover);
+    transition: all 0.3s ease;
+}
+
 
 /* Common Utilities della navbar navbar */
 #navbar_logo,
@@ -117,4 +129,107 @@
     align-items: center;
 }
 
+/*#endregion */
+
+/*#region Navbar MediaQueries */
+@media screen and (max-width: 960px) {
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: var(--navbar_fixed_height);
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar_menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        z-index: -1;
+        background-color: #131313;
+    }
+
+    .navbar_menu.active {
+        background: #131313;
+        top: 100%;
+        z-index: 99;
+        font-size: 1.6rem;
+    }
+
+    #navbar_logo {
+        padding-left: 25px;
+    }
+
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar_item {
+        width: 100%;
+    }
+
+    /* Links della navbar */
+    .navbar_links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    /* Menu per il mobile */
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar_btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar_toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }    
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    } 
+
+    /* Common Rules */
+    .navbar_menu,
+    .navbar_menu.active {
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 50vh;
+    }
+}
 /*#endregion */
