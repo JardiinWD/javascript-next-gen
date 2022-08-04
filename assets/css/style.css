@@ -219,8 +219,9 @@
     /* Links della navbar */
     .navbar_links {
         text-align: center;
-        padding: 2rem;
+        padding: 1rem;
         width: 100%;
+        font-size: 1rem;
         display: table;
     }
 
@@ -234,14 +235,15 @@
 
     .navbar_btn {
         padding-bottom: 2rem;
+        font-size: 1rem;
     }
 
     .button {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
-        height: 80px;
+        width: 50%;
+        height: 50px;
         margin: 0;
     }
 
@@ -504,11 +506,41 @@
 .services_card button {
     padding: 10px 20px;
     background: #f77062;
-    position: absolute;
     top: 440px;
     font-size: 1rem;
     cursor: pointer;
 }
 
+.services_card:hover {
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+/*#endregion */
+
+/*#region M.Queries Our Services Section */
+@media screen and (max-width: 960px) {
+    .services {
+        height: 1600px;
+    }
+
+    .services h1 {
+        font-size: 2rem;
+        margin-top: 12rem;
+    }
+}
+
+@media screen and (max-width: 48px) {
+    .services {
+        height: 1400px;
+    }
+    .services h1 {
+        font-size: 1.2rem;
+    }
+    .services_card{
+        width: 300px;
+    }
+}
 
 /*#endregion */
