@@ -166,6 +166,7 @@
         padding-left: 25px;
     }
 
+    /* Queste sono le mie singole linee */
     .navbar_toggle .bar {
         width: 25px;
         height: 3px;
@@ -207,19 +208,23 @@
         margin: 0;
     }
 
+    /* Classi per tutte e 3 le linee */
     .navbar_toggle .bar {
         display: block;
         cursor: pointer;
     }
 
+    /* Classi per menu a tendina */
+
+    /* La seconda scompare */
     #mobile-menu.is-active .bar:nth-child(2) {
         opacity: 0;
     }
-
+    /* La prima ruota */
     #mobile-menu.is-active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }    
-
+    /* La terza ruota */
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     } 
