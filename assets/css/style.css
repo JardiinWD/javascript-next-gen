@@ -19,7 +19,8 @@
 /* Common utilities per i loghi color Gradient */
 #navbar_logo,
 .main_content h1,
-.main_content h2 {
+.main_content h2,
+.services h1 {
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -38,6 +39,22 @@
 .main_btn:after {
     transition: all 0.35s;
     border-radius: 4px;        
+}
+
+.button,
+.main_btn,
+.services_card button {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+.services h2,
+.services_card p,
+.services_card button {
+    color: #fff;
+    position: absolute;
+    left: 30px;
 }
 
 /*#endregion */
@@ -116,9 +133,6 @@
     padding: 10px 20px;
     height: 80%;
     width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 4px;
     background: var(--navbar_button_bg);
     color: var(--navbar_links_color);
 }
@@ -264,6 +278,7 @@
 
 /*#region Hero Section */
 
+/* Elemento radice */
 :root {
     --main_bg_color : #141414;
     --main_content_h1_bg : #ff8177;
@@ -317,12 +332,10 @@
     font-size: 1rem;
     background-image: linear-gradient(to top, var(--main_content_btn_bot) 0%, var(--main_content_btn_top) 100% );
     padding: 14px 32px;
-    border: none;
     color: #fff;
     margin-top: 2rem;
     cursor: pointer;
     position: relative;
-    outline: none;
 }
 
 /* Testo button get Started */
@@ -418,5 +431,84 @@
 /*#endregion */
 
 /*#region Our Services Section */
+
+/* Elemento radice */
+:root {
+    --services_bg : #141414;
+    --services_h : 100vh;
+    --services_h1_bg : #ff8177;
+    --services_card_w : 400px;
+    --services_card_h : 525px;    
+}
+
+.services{
+    background: var(--services_bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: var(--services_h);
+}
+
+.services h1 {
+    background-color: var(--services_h1_bg);
+    background-image: linear-gradient(to right, 
+        #ff8177 0%,
+        #ff867a 0%,
+        #ff8c7f 20%,
+        #f99185 52%,
+        #cf556c 78%,
+        #b12a5b 100%   
+    );
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+.services_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services_card {
+    margin: 1rem;
+    height: var(--services_card_h);
+    width: var(--services_card_w);
+    border-radius: 4px;
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%),
+        url('./../img/pic3.jpg');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+/* Cambio immagine per card successiva */
+.services_card:nth-child(2) {
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%),
+        url('./../img/pic4.jpg');
+}
+
+.services h2 {
+    top: 350px;
+}
+
+.services_card p {
+    top: 400px;
+}
+
+.services_card button {
+    padding: 10px 20px;
+    background: #f77062;
+    position: absolute;
+    top: 440px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 
 /*#endregion */
