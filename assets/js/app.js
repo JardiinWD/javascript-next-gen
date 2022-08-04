@@ -5,17 +5,17 @@ const menu = document.querySelector("#mobile-menu")
 /* Seleziono la mia lista non ordinata con tutti i list item */
 const menuLinks = document.querySelector(".navbar_menu")
 /* Verifica in console */
-console.log(menu, menuLinks);
+/* console.log(menu, menuLinks); */
 
 /* Seleziono il wrapper delle mie cards */
 const services = document.querySelector(".services_container")
 /* Verifica in console */
-console.log(services);
+/* console.log(services); */
 
 /* Seleziono il wrapper delle mie icone */
 const icons = document.querySelector(".social_icons")
 /* Verifica in console */
-console.log(icons);
+/* console.log(icons); */
 
 /* Seleziono il mio Wrapper dei link footer principale */
 const firstFooterLinks = document.getElementById("first_sections")
@@ -23,7 +23,20 @@ const secondFooterLinks = document.getElementById("second_sections")
 const thirdFooterLinks = document.getElementById("third_sections")
 const fourthFooterLinks = document.getElementById("fourth_sections")
 /* Verifica in console */
-console.log(firstFooterLinks, secondFooterLinks, thirdFooterLinks, fourthFooterLinks);
+/* console.log(firstFooterLinks, secondFooterLinks, thirdFooterLinks, fourthFooterLinks); */
+
+const firstFooterTitle = `<h2>About Us</h2>`
+const secondFooterTitle = `<h2>Contact Us</h2>`
+const thirdFooterTitle = `<h2>Videos</h2>`
+const fourthFooterTitle = `<h2>Social Media</h2>`
+console.log(firstFooterTitle, secondFooterTitle, thirdFooterTitle, fourthFooterTitle);
+
+/* Appendo i miei titoli dinamici */
+firstFooterLinks.insertAdjacentHTML('afterbegin', firstFooterTitle)
+secondFooterLinks.insertAdjacentHTML('afterbegin', secondFooterTitle)
+thirdFooterLinks.insertAdjacentHTML('afterbegin', thirdFooterTitle)
+fourthFooterLinks.insertAdjacentHTML('afterbegin', fourthFooterTitle)
+
 
 
 /* Creazione di navbar di oggetto */
@@ -44,7 +57,7 @@ const navbarLinks = [
         name : 'Products'
     },
 ]
-console.log(navbarLinks);
+/* console.log(navbarLinks); */
 
 /* Creazione dei dati dinamici delle cards */
 const servicesCardsData = [
@@ -61,7 +74,7 @@ const servicesCardsData = [
         btn : 'Get Started'
     }
 ]
-console.log(servicesCardsData);
+/* console.log(servicesCardsData); */
 
 /* Creazione dati dinamici per le mie icone */
 const iconsLinks = [
@@ -101,7 +114,7 @@ const iconsLinks = [
         icon: 'fab fa-linkedin'
     }      
 ]
-console.log(iconsLinks);
+/* console.log(iconsLinks); */
 
 /* Prima sezione del Footer */
 const firstSections = [
@@ -126,7 +139,7 @@ const firstSections = [
         name: 'Terms of Service',
     },               
 ]
-console.log(firstSections);
+/* console.log(firstSections); */
 
 /* Seconda sezione del Footer */
 const secondSections = [
@@ -143,7 +156,7 @@ const secondSections = [
         name: 'Sponsorships',
     },            
 ]
-console.log(secondSections);
+/* console.log(secondSections); */
 
 /* Terza sezione del Footer */
 const thirdSections = [
@@ -164,7 +177,7 @@ const thirdSections = [
         name: 'Influencer',
     },             
 ]
-console.log(thirdSections);
+/* console.log(thirdSections); */
 
 /* Quarta sezione del Footer */
 const fourthSections = [
@@ -185,7 +198,7 @@ const fourthSections = [
         name: 'Twitter',
     },             
 ]
-console.log(fourthSections);
+/* console.log(fourthSections); */
 
 //#endregion
 
@@ -204,7 +217,7 @@ navbarLinks.forEach(element => {
 
 /* Avvio ciclo per le cards dinamiche */
 servicesCardsData.forEach(element => {
-    console.log(element); // Verifica del mio oggetto
+    /* console.log(element); */ // Verifica del mio oggetto
     /* Creo la mia singola card dinamica */
     let singleCard = 
     `
@@ -219,7 +232,7 @@ servicesCardsData.forEach(element => {
 
 /* Avvio ciclo per le icone social dinamiche */
 iconsLinks.forEach(element => {
-    console.log(element); // Verifica del mio oggetto
+    /* console.log(element); */ // Verifica del mio oggetto
     /* Creo la mia singola icona dinamica */
     let singleIcon = 
     `
@@ -232,7 +245,7 @@ iconsLinks.forEach(element => {
 
 /* Avvio ciclo per la prima sezione dinamica del footer */
 firstSections.forEach(element => {
-    console.log(element);
+/*     console.log(element); */
     /* Singolo Ancor Tag */
     let singleLink = `<a href="${element.ref}">${element.name}</a>`
     firstFooterLinks.insertAdjacentHTML('beforeend', singleLink)
@@ -240,7 +253,7 @@ firstSections.forEach(element => {
 
 /* Avvio ciclo per la seconda sezione dinamica del footer */
 secondSections.forEach(element => {
-    console.log(element);
+/*     console.log(element); */
     /* Singolo Ancor Tag */
     let singleLink = `<a href="${element.ref}">${element.name}</a>`
     secondFooterLinks.insertAdjacentHTML('beforeend', singleLink)
@@ -248,7 +261,7 @@ secondSections.forEach(element => {
 
 /* Avvio ciclo per la terza sezione dinamica del footer */
 thirdSections.forEach(element => {
-    console.log(element);
+/*     console.log(element); */
     /* Singolo Ancor Tag */
     let singleLink = `<a href="${element.ref}">${element.name}</a>`
     thirdFooterLinks.insertAdjacentHTML('beforeend', singleLink)
@@ -256,7 +269,7 @@ thirdSections.forEach(element => {
 
 /* Avvio ciclo per la terza sezione dinamica del footer */
 fourthSections.forEach(element => {
-    console.log(element);
+/*     console.log(element); */
     /* Singolo Ancor Tag */
     let singleLink = `<a href="${element.ref}">${element.name}</a>`
     fourthFooterLinks.insertAdjacentHTML('beforeend', singleLink)
