@@ -104,4 +104,4 @@ Anche le varie voci del footer sono state inserite dinamicamente nel markup, sem
 
 Anche le varie voci della navbar sono state inserite dinamicamente nel markup, sempre tramite ciclo forEach.
 
-![Logo](https://media-exp1.licdn.com/dms/image/C4D0BAQErbNlWeMNGDQ/company-logo_200_200/0/1600963347198?e=1667433600&v=beta&t=bfGc2f5n7_fJNjBFOAc5qZoEvndLkby2ymHEFV_cfm4)
+![Logo](https://hiringplatform.boolean.careers/images/logo.png)
